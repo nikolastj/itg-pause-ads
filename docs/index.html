@@ -7,8 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <h1>ITG Pause Ads</h1>
+    <div class="small-screen-message">
+        <img src="assets/monitor-icon.svg" alt="Monitor icon" class="icon">
+        <h2>Screen Too Small</h2>
+        <p>Please use a larger screen or increase your browser window size to view this preview.</p>
+    </div>
+    <main class="app-content">
+        <header class="app-header">
+            <h1>ITG Pause Ads</h1>
+        </header>
+        <div class="template-selector">
+            <select id="template-select">
+                <option value="" selected disabled>Select a template...</option>
+                <option value="fullscreen_animation">Fullscreen Animation</option>
+                <option value="left_side_animation">Left Side Animation</option>
+                <option value="right_side_animation">Right Side Animation</option>
+                <option value="lower_third">Lower Third</option>
+                <option value="full_screen_ad">Full Screen Ad</option>
+                <option value="right_side_ad_full_screen">Right Side Ad Full Screen</option>
+                <option value="left_side_ad">Left Side Ad</option>
+                <option value="right_side_ad">Right Side Ad</option>
+            </select>
+        </div>
+        <div class="content-area">
+            <div class="preview-area">
+                <!-- Empty for now -->
+            </div>
+            <div class="json-area">
+                <div class="json-header">
+                    <span>JSON Preview</span>
+                    <button id="copy-json" class="copy-btn">Copy</button>
+                </div>
+                <pre id="json-display">// Select a template to view JSON</pre>
+            </div>
+        </div>
     </main>
     <script src="app.js"></script>
 </body>

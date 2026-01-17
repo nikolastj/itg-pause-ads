@@ -1,0 +1,49 @@
+{
+  "name": "Type Creative Name",
+  "screen": {
+    "overlapVideoRect": true,
+    "duration": "00:00:30"
+  },
+  "items": [
+    {
+      "rows": [
+        {
+          "columns": [
+            {
+              "element": {
+                "type": "image",
+                "value": "https://assets.inthegame.io/uploads/v2-3/kargo/images/right646_4741cgj9429.png.webp",
+                "rect": {
+                  "x": "66.3%",
+                  "y": "0%",
+                  "width": "33.7%",
+                  "height": "100%"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rows": [
+        {
+          "columns": [
+            {
+              "element": {
+                "type": "image",
+                "value": "https://assets.inthegame.io/uploads/v2-3/TestingsQA/images/wrapper_2537ies4845.png.webp",
+                "rect": {
+                  "x": "0%",
+                  "y": "0%",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
