@@ -28,12 +28,16 @@
                 <option value="left_side_ad">Left Side Ad</option>
                 <option value="right_side_ad">Right Side Ad</option>
             </select>
+            <button id="clear-btn" class="clear-btn">Clear</button>
         </div>
         <div class="content-area">
             <div class="preview-area">
-                <video id="background-video" autoplay muted playsinline loop>
-                    <source src="https://cdn1.videobyte.com/ads/mixkit-aerial-tracking-of-a-man-on-a-motorcycle-in-the-43115-hd-ready.mp4" type="video/mp4">
-                </video>
+                <div class="video-container" id="video-container">
+                    <video id="background-video" autoplay muted playsinline loop>
+                        <source src="https://cdn1.videobyte.com/ads/mixkit-aerial-tracking-of-a-man-on-a-motorcycle-in-the-43115-hd-ready.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-container" id="overlay-container"></div>
+                </div>
             </div>
             <div class="json-area">
                 <div class="json-header">

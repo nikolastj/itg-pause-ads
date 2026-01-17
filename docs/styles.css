@@ -71,6 +71,7 @@ body {
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 .template-selector select {
@@ -86,6 +87,24 @@ body {
 .template-selector select:focus {
     outline: none;
     border-color: #0066cc;
+}
+
+.clear-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: #666;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background: #555;
+}
+
+.clear-btn:active {
+    background: #444;
 }
 
 .content-area {
@@ -104,12 +123,39 @@ body {
     justify-content: center;
 }
 
-#background-video {
+.video-container {
+    position: relative;
     max-width: 1000px;
+    width: 100%;
+}
+
+#background-video {
     width: 100%;
     height: auto;
     display: block;
     background: #000;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.overlay-item {
+    position: absolute;
+    overflow: hidden;
+}
+
+.overlay-item img,
+.overlay-item video,
+.overlay-item canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .json-area {
