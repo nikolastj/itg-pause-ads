@@ -1,0 +1,49 @@
+{
+  "name": "Type Creative Name",
+  "screen": {
+    "overlapVideoRect": true,
+    "duration": "00:00:30"
+  },
+  "items": [
+    {
+      "rows": [
+        {
+          "columns": [
+            {
+              "element": {
+                "type": "image",
+                "value": "https://assets.internal.inthegame.io/uploads/dev/testing/images/bg_full_pausead_1051dje8853.jpg.webp",
+                "rect": {
+                  "x": "0%",
+                  "y": "0%",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rows": [
+        {
+          "columns": [
+            {
+              "element": {
+                "type": "image",
+                "value": "https://assets.internal.inthegame.io/uploads/dev/testing/images/wrapper_029yuu5903.png.webp",
+                "rect": {
+                  "x": "0%",
+                  "y": "0%",
+                  "width": "100%",
+                  "height": "100%"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
