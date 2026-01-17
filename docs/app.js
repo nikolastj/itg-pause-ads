@@ -12,6 +12,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track active video animations for cleanup
     let activeAnimations = [];
     
+    // Detect Safari browser
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+    
+    // Create Safari warning overlay
+    function createSafariWarning() {
+        const warning = document.createElement('div');
+        warning.className = 'safari-warning-overlay';
+        warning.innerHTML = `
+            <div class="safari-warning-content">
+                <h3>Safari Required</h3>
+                <p>This animation uses .mov files with transparency and only works in Safari.</p>
+            </div>
+        `;
+        return warning;
+    }
+    
     // Clear all overlays
     function clearOverlays() {
         // Stop any running animation frames
@@ -163,10 +181,21 @@ document.addEventListener('DOMContentLoaded', () => {
             bgVideo.pause();
         }
         
+        // Check for Safari-only templates
+        const safariOnlyTemplates = ['left_side_animation', 'right_side_animation'];
+        const needsSafari = safariOnlyTemplates.includes(templateKey);
+        
         try {
             const response = await fetch(`assets/${templateKey}.json`);
             const data = await response.json();
             jsonDisplay.textContent = JSON.stringify(data, null, 2);
+            
+            // Show Safari warning for specific templates on non-Safari browsers
+            if (needsSafari && !isSafari()) {
+                clearOverlays();
+                overlayContainer.appendChild(createSafariWarning());
+                return;
+            }
             
             // Render the template overlay
             renderTemplate(data);
