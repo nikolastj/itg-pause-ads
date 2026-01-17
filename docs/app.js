@@ -5,11 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const templateSelect = document.getElementById('template-select');
     const jsonDisplay = document.getElementById('json-display');
     const copyBtn = document.getElementById('copy-json');
+    const bgVideo = document.getElementById('background-video');
     
     // Handle template selection
     templateSelect.addEventListener('change', async (e) => {
         const templateKey = e.target.value;
         if (!templateKey) return;
+        
+        // Pause video when template is selected
+        if (bgVideo) {
+            bgVideo.pause();
+        }
         
         try {
             const response = await fetch(`assets/${templateKey}.json`);
